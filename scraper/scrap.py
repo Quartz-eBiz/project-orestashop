@@ -119,7 +119,7 @@ if response.status_code == 200:
         except requests.exceptions.RequestException as e:
             print(f"Problem z połączeniem dla {category_name}: {e}")
 
-    with open('menu_structure.json', 'w', encoding='utf-8') as f:
+    with open('../data/menu_structure.json', 'w', encoding='utf-8') as f:
         json.dump(MENU_STRUCTURE, f, ensure_ascii=False, indent=4)
 
 else:
