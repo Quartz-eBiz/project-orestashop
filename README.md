@@ -1,1 +1,1 @@
-# project-orestashop
+# project-prestashop
