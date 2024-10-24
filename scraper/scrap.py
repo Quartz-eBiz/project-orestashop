@@ -1,7 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 import json
-import os
 
 URL = "https://sklep.magiakamieni.pl/"
 try:
@@ -62,10 +61,54 @@ if response.status_code == 200:
                             if product_link_tag:
                                 product_link = product_link_tag['href']
                                 product_name = product_link_tag.get('title', 'Brak tytułu')
-                                data['sub_categories'][sub_name]['products'].append({
-                                    'name': product_name,
-                                    'link': product_link
-                                })
+                                try:
+                                    product_detail_response = requests.get(product_link)
+                                    product_detail_response.raise_for_status()
+                                    product_detail_soup = BeautifulSoup(product_detail_response.text, 'lxml')
+
+                                    description_tag = product_detail_soup.find('div', id='short_description_content')
+                                    product_description = description_tag.get_text(
+                                        strip=True) if description_tag else 'Brak opisu'
+
+                                    price_tag = product_detail_soup.find('span', id='our_price_display')
+                                    product_price = price_tag.get_text(strip=True) if price_tag else 'Brak ceny'
+
+                                    attributes = {}
+                                    attributes_table = product_detail_soup.find('table',
+                                                                                class_='table-data-sheet mk')
+
+                                    if attributes_table:
+                                        rows = attributes_table.find_all('tr')
+                                        for row in rows:
+                                            cells = row.find_all('td')
+                                            if len(cells) >= 2:
+                                                attribute_name = cells[0].get_text(strip=True)
+                                                attribute_value = cells[1].get_text(strip=True)
+                                                attributes[attribute_name] = attribute_value
+                                    else:
+                                        print("Nie znaleziono tabeli z atrybutami dla produktu: ", product_name)
+
+                                    image_tags = product_detail_soup.find_all('a', class_='fancybox')
+                                    max_images = 2
+                                    images = []
+
+                                    for image_tag in image_tags:
+                                        image_link = image_tag['href']
+                                        if len(images) >= max_images:
+                                            break
+                                        images.append(image_link)
+
+                                    data['sub_categories'][sub_name]['products'].append({
+                                        'name': product_name,
+                                        'link': product_link,
+                                        'description': product_description,
+                                        'price': product_price,
+                                        'attributes': attributes,
+                                        'images': images
+                                    })
+
+                                except requests.exceptions.RequestException as e:
+                                    print(f"Problem z połączeniem dla produktu {product_name}: {e}")
 
                     except requests.exceptions.RequestException as e:
                         print(f"Problem z połączeniem dla subkategorii {sub_name}: {e}")
@@ -76,9 +119,8 @@ if response.status_code == 200:
         except requests.exceptions.RequestException as e:
             print(f"Problem z połączeniem dla {category_name}: {e}")
 
-    if not os.path.exists('menu_structure.json'):
-        with open('menu_structure.json', 'w', encoding='utf-8') as f:
-            json.dump(MENU_STRUCTURE, f, ensure_ascii=False, indent=4)
+    with open('menu_structure.json', 'w', encoding='utf-8') as f:
+        json.dump(MENU_STRUCTURE, f, ensure_ascii=False, indent=4)
 
 else:
     print("Problem z pobraniem strony:", response.status_code)
