@@ -15,12 +15,13 @@ services:
   prestashop:
     platform: linux/x86_64
     container_name: prestashop
-    image: prestashop/prestashop:1.7.8
+    build: .
     restart: unless-stopped
     depends_on:
       - mysql
     ports:
       - 8080:80
+      - 443:443
     environment:
       DB_SERVER: ebiz_mysql
       DB_NAME: prestashop
@@ -32,6 +33,7 @@ services:
       - prestashop_network
     volumes:
       - ./:/var/www/html
+      - ./docker/ssl:/certs
 networks:
   prestashop_network:
 volumes:
