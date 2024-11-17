@@ -3,7 +3,8 @@
 /.htaccess
 *.log
 .env
-shop/docker/ssl/apache-selfsigned.key
+docker/ssl/apache-selfsigned.key
+img/tmp
 
 app/config/parameters.php
 config/defines_custom.inc.php
