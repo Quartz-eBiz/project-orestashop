@@ -1,4 +1,5 @@
 # Cache, temp and personal files
+admin*/
 
 /.htaccess
 *.log
