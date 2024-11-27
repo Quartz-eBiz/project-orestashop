@@ -29,6 +29,7 @@ def push_categories_and_products(
     home_category_id = '2'
     element = 'category'
     resource = 'categories'
+    products_pushed = 0
 
     for category, subcategories in _scraped_data.items():
         logger.debug(f'Trying to push category: {category}')
@@ -63,6 +64,10 @@ def push_categories_and_products(
                         _category_name=subcategory
                 ):
                     num_of_products_pushed_in_subcategory += 1
+                    products_pushed += 1
+
+                if products_pushed == PRODUCTS_TO_PUSH:
+                    return
 
                 if num_of_products_pushed_in_subcategory == MAX_PRODUCTS_IN_SUBCATEGORY:
                     break
@@ -162,7 +167,7 @@ def push_product_to_service(
 
     # Product tax rules
     product_tax_rules = ET.SubElement(product, 'id_tax_rules_group')
-    product_tax_rules.text = '1'  # True
+    product_tax_rules.text = '4' 
 
     # Easy to read link to the product
     product_link_rewrite = ET.SubElement(product, 'link_rewrite')
@@ -336,8 +341,12 @@ def generate_link_rewrite(_name: str):
 
 
 if __name__ == '__main__':
+    logger.debug("Starting the script")
+
     scraped_data: dict = p_crud.get_json_data()
     scraped_subcategories_only: list = p_crud.get_txt_data()
 
     attributes: dict = get_attributes(scraped_data)
     push_categories_and_products(scraped_data, scraped_subcategories_only, attributes)
+
+    logger.debug("Script finished")
