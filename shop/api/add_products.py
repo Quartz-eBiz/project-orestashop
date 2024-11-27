@@ -57,6 +57,7 @@ def push_categories_and_products(
 
             for product_name, product_attributes in products.items():
                 if push_product_package_to_service(
+                        _name_id=products_pushed,
                         _name=product_name,
                         _attr=product_attributes,
                         _category_ids=category_ids,
@@ -66,7 +67,7 @@ def push_categories_and_products(
                     num_of_products_pushed_in_subcategory += 1
                     products_pushed += 1
 
-                if products_pushed == PRODUCTS_TO_PUSH:
+                if products_pushed == PRODUCTS_TO_PUSH + 1:
                     return
 
                 if num_of_products_pushed_in_subcategory == MAX_PRODUCTS_IN_SUBCATEGORY:
@@ -94,12 +95,14 @@ def get_attr_value_id(_value: str, _attribute: str, _attr_id: str, _possible_att
 
 
 def push_product_to_service(
+        _name_id: int,
         _name: str,
         _attr: dict,
         _category_ids: list[str],
         _possible_attributes: dict,
         _category_name: str
 ) -> bool:
+    
     for link in _attr['images']:
         if not os.path.exists(link):
             return False
@@ -172,7 +175,7 @@ def push_product_to_service(
     # Easy to read link to the product
     product_link_rewrite = ET.SubElement(product, 'link_rewrite')
     product_link_rewrite_lang = ET.SubElement(product_link_rewrite, 'language', attrib={'id': '2'})
-    product_link_rewrite_lang.text = generate_link_rewrite(_name)
+    product_link_rewrite_lang.text = generate_link_rewrite(_name+str(_name_id))
 
     product_attributes = ET.SubElement(product_associations, 'product_features')
     for attribute, value in _attr['attributes'].items():
@@ -273,6 +276,7 @@ def push_product_image_to_service(_src: str, _product_id: str):
 
 
 def push_product_package_to_service(
+        _name_id: int,
         _name: str,
         _attr: dict,
         _category_ids: list[str],
@@ -283,6 +287,7 @@ def push_product_package_to_service(
     resource = 'products'
 
     product_has_photos = push_product_to_service(
+        _name_id,
         _name,
         _attr,
         _category_ids,
@@ -294,7 +299,7 @@ def push_product_package_to_service(
         logger.debug("No photos of product found. Product not sent.")
         return False
 
-    product_id = p_crud.get_id_from_service(_name, resource, element)
+    product_id = p_crud.get_id_from_service(generate_link_rewrite(_name+str(_name_id)), resource, element)
     stock_id = get_stock_id_from_service(product_id)
     push_stock_package_info_to_service(product_id, stock_id)
     images = _attr['images']

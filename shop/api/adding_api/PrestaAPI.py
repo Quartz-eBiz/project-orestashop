@@ -36,7 +36,12 @@ class PrestaCRUD:
 
     def get_id_from_service(self, _attr_name: str, _resource: str, _element: str) -> str | None:
         encoded_name = quote(_attr_name)
-        url = f'{self.API_URL}/{_resource}?filter[name]={encoded_name}'
+
+        if _element == 'product':
+            url = f'{self.API_URL}/{_resource}?filter[link_rewrite]={encoded_name}'
+        else:
+            url = f'{self.API_URL}/{_resource}?filter[name]={encoded_name}'
+
         response = requests.get(url, auth=(self.API_KEY, ''), verify=False)
 
         if response.ok:
