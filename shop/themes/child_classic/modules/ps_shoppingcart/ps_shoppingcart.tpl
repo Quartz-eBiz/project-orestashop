@@ -37,7 +37,7 @@
               <img class="img-fluid" src="{$product.cover.bySize.home_default.url}" alt="{$product.name}" loading="lazy">
             </div>
             <div class="cart-products__desc">
-              <p>{$product.name}</p>
+              <a href="{$product.url}"><p>{$product.name}</p></a>
               <span>{$product.quantity} pcs</span>
               <span>{$product.total}</span>
             </div>

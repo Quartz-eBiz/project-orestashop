@@ -6,6 +6,7 @@
   </div>
   <div class="cart-products__desc">
     <p class="mb-2 text-sm">
+      {$product.url}
       <a href="{$product.url}">{$product.name}</a>
     </p>
     <div class="d-flex justify-content-between mt-3">
