@@ -703,7 +703,7 @@ CREATE TABLE `ps_cart` (
 
 LOCK TABLES `ps_cart` WRITE;
 /*!40000 ALTER TABLE `ps_cart` DISABLE KEYS */;
-INSERT INTO `ps_cart` VALUES (8,1,1,0,'',2,0,0,3,0,6,'',0,0,'',0,0,'2024-11-20 20:31:28','2024-11-20 20:31:28','{\"checkout-personal-information-step\":{\"step_is_reachable\":true,\"step_is_complete\":false},\"checkout-addresses-step\":{\"step_is_reachable\":false,\"step_is_complete\":false,\"use_same_address\":true},\"checkout-delivery-step\":{\"step_is_reachable\":false,\"step_is_complete\":false},\"checkout-payment-step\":{\"step_is_reachable\":false,\"step_is_complete\":false},\"checksum\":\"cc877f045db9f31d13bcb2aa735ff2d7ecc8fcc1\"}'),(9,1,1,0,'',2,0,0,3,0,10,'',0,0,'',0,0,'2024-11-28 19:10:31','2024-11-28 19:13:37',NULL),(10,1,1,0,'',2,0,0,3,0,7,'',0,0,'',0,0,'2024-11-28 19:14:17','2024-11-28 19:15:12',NULL),(11,1,1,0,'',2,0,0,3,0,8,'',0,0,'',0,0,'2024-11-28 19:16:01','2024-11-28 19:19:54',NULL),(12,1,1,0,'',2,0,0,3,0,9,'',0,0,'',0,0,'2024-11-28 19:22:14','2024-11-28 19:23:07',NULL),(13,1,1,0,'',2,0,0,3,0,10,'',0,0,'',0,0,'2024-11-28 19:23:17','2024-11-28 19:24:33',NULL),(14,1,1,0,'',2,0,0,3,0,11,'',0,0,'',0,0,'2024-11-28 19:24:44','2024-11-28 19:40:04',NULL),(15,1,1,0,'',2,0,0,3,0,12,'',0,0,'',0,0,'2024-11-28 19:56:58','2024-11-28 19:56:58',NULL),(16,1,1,0,'',2,0,0,3,0,13,'',0,0,'',0,0,'2024-11-28 20:08:45','2024-11-28 21:44:06',NULL);
+INSERT INTO `ps_cart` VALUES (8,1,1,0,'',2,0,0,3,0,6,'',0,0,'',0,0,'2024-11-20 20:31:28','2024-11-20 20:31:28','{\"checkout-personal-information-step\":{\"step_is_reachable\":true,\"step_is_complete\":false},\"checkout-addresses-step\":{\"step_is_reachable\":false,\"step_is_complete\":false,\"use_same_address\":true},\"checkout-delivery-step\":{\"step_is_reachable\":false,\"step_is_complete\":false},\"checkout-payment-step\":{\"step_is_reachable\":false,\"step_is_complete\":false},\"checksum\":\"cc877f045db9f31d13bcb2aa735ff2d7ecc8fcc1\"}'),(9,1,1,0,'',2,0,0,3,0,10,'',0,0,'',0,0,'2024-11-28 19:10:31','2024-11-28 19:13:37',NULL),(10,1,1,0,'',2,0,0,3,0,7,'',0,0,'',0,0,'2024-11-28 19:14:17','2024-11-28 19:15:12',NULL),(11,1,1,0,'',2,0,0,3,0,8,'',0,0,'',0,0,'2024-11-28 19:16:01','2024-11-28 19:19:54',NULL),(12,1,1,0,'',2,0,0,3,0,9,'',0,0,'',0,0,'2024-11-28 19:22:14','2024-11-28 19:23:07',NULL),(13,1,1,0,'',2,0,0,3,0,10,'',0,0,'',0,0,'2024-11-28 19:23:17','2024-11-28 19:24:33',NULL),(14,1,1,0,'',2,0,0,3,0,11,'',0,0,'',0,0,'2024-11-28 19:24:44','2024-11-28 19:40:04',NULL),(15,1,1,0,'',2,0,0,3,0,12,'',0,0,'',0,0,'2024-11-28 19:56:58','2024-11-28 19:56:58',NULL),(16,1,1,0,'',2,0,0,3,1,13,'3ee49a972e726dcf58aad8b8231d8929',0,0,'',0,0,'2024-11-28 20:08:45','2024-11-28 22:30:45',NULL);
 /*!40000 ALTER TABLE `ps_cart` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1540,7 +1540,7 @@ CREATE TABLE `ps_connections` (
   KEY `id_guest` (`id_guest`),
   KEY `date_add` (`date_add`),
   KEY `id_page` (`id_page`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1549,7 +1549,7 @@ CREATE TABLE `ps_connections` (
 
 LOCK TABLES `ps_connections` WRITE;
 /*!40000 ALTER TABLE `ps_connections` DISABLE KEYS */;
-INSERT INTO `ps_connections` VALUES (1,1,1,1,1,2130706433,'2024-11-13 21:10:23','https://www.prestashop.com'),(2,1,1,3,1,2886860801,'2024-11-13 21:11:30',''),(3,1,1,3,1,2886860801,'2024-11-13 21:42:52',''),(4,1,1,4,1,2886860801,'2024-11-17 21:37:16',''),(5,1,1,4,1,2886860801,'2024-11-17 22:46:56',''),(6,1,1,5,1,2886860801,'2024-11-19 14:29:54',''),(7,1,1,5,1,2886860801,'2024-11-19 19:10:08',''),(8,1,1,5,2,2886860801,'2024-11-19 23:01:21',''),(9,1,1,5,2,2886860801,'2024-11-19 23:44:55',''),(10,1,1,5,1,2886860801,'2024-11-20 20:15:54',''),(11,1,1,6,1,2886860801,'2024-11-20 20:31:19',''),(12,1,1,10,1,2886860801,'2024-11-28 19:01:07',''),(13,1,1,7,1,2886860801,'2024-11-28 19:13:56',''),(14,1,1,8,1,2886860801,'2024-11-28 19:15:59',''),(15,1,1,9,1,2886860801,'2024-11-28 19:22:10',''),(16,1,1,11,1,2886860801,'2024-11-28 19:24:42',''),(17,1,1,11,2,2886860801,'2024-11-28 19:55:33',''),(18,1,1,12,1,2886860801,'2024-11-28 19:55:49',''),(19,1,1,13,1,2886860801,'2024-11-28 20:01:33',''),(20,1,1,13,2,2886860801,'2024-11-28 20:33:07',''),(21,1,1,13,2,2886860801,'2024-11-28 21:04:52',''),(22,1,1,13,2,2886860801,'2024-11-28 21:35:51',''),(23,1,1,13,2,2886860801,'2024-11-28 22:06:42','');
+INSERT INTO `ps_connections` VALUES (1,1,1,1,1,2130706433,'2024-11-13 21:10:23','https://www.prestashop.com'),(2,1,1,3,1,2886860801,'2024-11-13 21:11:30',''),(3,1,1,3,1,2886860801,'2024-11-13 21:42:52',''),(4,1,1,4,1,2886860801,'2024-11-17 21:37:16',''),(5,1,1,4,1,2886860801,'2024-11-17 22:46:56',''),(6,1,1,5,1,2886860801,'2024-11-19 14:29:54',''),(7,1,1,5,1,2886860801,'2024-11-19 19:10:08',''),(8,1,1,5,2,2886860801,'2024-11-19 23:01:21',''),(9,1,1,5,2,2886860801,'2024-11-19 23:44:55',''),(10,1,1,5,1,2886860801,'2024-11-20 20:15:54',''),(11,1,1,6,1,2886860801,'2024-11-20 20:31:19',''),(12,1,1,10,1,2886860801,'2024-11-28 19:01:07',''),(13,1,1,7,1,2886860801,'2024-11-28 19:13:56',''),(14,1,1,8,1,2886860801,'2024-11-28 19:15:59',''),(15,1,1,9,1,2886860801,'2024-11-28 19:22:10',''),(16,1,1,11,1,2886860801,'2024-11-28 19:24:42',''),(17,1,1,11,2,2886860801,'2024-11-28 19:55:33',''),(18,1,1,12,1,2886860801,'2024-11-28 19:55:49',''),(19,1,1,13,1,2886860801,'2024-11-28 20:01:33',''),(20,1,1,13,2,2886860801,'2024-11-28 20:33:07',''),(21,1,1,13,2,2886860801,'2024-11-28 21:04:52',''),(22,1,1,13,2,2886860801,'2024-11-28 21:35:51',''),(23,1,1,13,2,2886860801,'2024-11-28 22:06:42',''),(24,1,1,14,1,2886860801,'2024-11-28 22:30:46','');
 /*!40000 ALTER TABLE `ps_connections` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1905,7 +1905,7 @@ CREATE TABLE `ps_customer` (
   KEY `id_gender` (`id_gender`),
   KEY `id_shop_group` (`id_shop_group`),
   KEY `id_shop` (`id_shop`,`date_add`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1914,6 +1914,7 @@ CREATE TABLE `ps_customer` (
 
 LOCK TABLES `ps_customer` WRITE;
 /*!40000 ALTER TABLE `ps_customer` DISABLE KEYS */;
+INSERT INTO `ps_customer` VALUES (1,1,1,1,3,2,0,'','','','Łukasz','Walczak','lukilukiluk123456@gmail.com','$2y$10$m/ACMxdUZdZM2Vweo/8qT.za0NuB/s1V5nTpSHYKpxNAaj2HQ9.BK','2024-11-28 16:28:48','2002-05-04',1,'','2024-11-28 22:28:48',1,'',0.000000,0,0,'3ee49a972e726dcf58aad8b8231d8929','',1,0,0,'2024-11-28 22:28:48','2024-11-28 22:28:48','','0000-00-00 00:00:00');
 /*!40000 ALTER TABLE `ps_customer` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1939,6 +1940,7 @@ CREATE TABLE `ps_customer_group` (
 
 LOCK TABLES `ps_customer_group` WRITE;
 /*!40000 ALTER TABLE `ps_customer_group` DISABLE KEYS */;
+INSERT INTO `ps_customer_group` VALUES (1,3);
 /*!40000 ALTER TABLE `ps_customer_group` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2010,7 +2012,7 @@ CREATE TABLE `ps_customer_session` (
   `id_customer` int(10) unsigned DEFAULT NULL,
   `token` varchar(40) DEFAULT NULL,
   PRIMARY KEY (`id_customer_session`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2935,7 +2937,7 @@ CREATE TABLE `ps_guest` (
   KEY `id_customer` (`id_customer`),
   KEY `id_operating_system` (`id_operating_system`),
   KEY `id_web_browser` (`id_web_browser`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2944,7 +2946,7 @@ CREATE TABLE `ps_guest` (
 
 LOCK TABLES `ps_guest` WRITE;
 /*!40000 ALTER TABLE `ps_guest` DISABLE KEYS */;
-INSERT INTO `ps_guest` VALUES (1,0,0,2,0,0,0,0,0,0,0,0,0,0,'',0),(2,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),(3,6,11,0,0,0,0,0,0,0,0,0,0,0,'en',0),(4,6,11,3,0,0,0,0,0,0,0,0,0,0,'pl',0),(5,6,11,4,0,0,0,0,0,0,0,0,0,0,'pl',0),(6,6,11,0,0,0,0,0,0,0,0,0,0,0,'pl',0),(7,6,11,0,0,0,0,0,0,0,0,0,0,0,'en',0),(8,6,11,0,0,0,0,0,0,0,0,0,0,0,'en',0),(9,6,11,0,0,0,0,0,0,0,0,0,0,0,'en',0),(10,6,11,0,0,0,0,0,0,0,0,0,0,0,'en',0),(11,6,11,0,0,0,0,0,0,0,0,0,0,0,'en',0),(12,6,11,0,0,0,0,0,0,0,0,0,0,0,'en',0),(13,6,11,0,0,0,0,0,0,0,0,0,0,0,'en',0);
+INSERT INTO `ps_guest` VALUES (1,0,0,2,0,0,0,0,0,0,0,0,0,0,'',0),(2,0,0,0,0,0,0,0,0,0,0,0,0,0,'',0),(3,6,11,0,0,0,0,0,0,0,0,0,0,0,'en',0),(4,6,11,3,0,0,0,0,0,0,0,0,0,0,'pl',0),(5,6,11,4,0,0,0,0,0,0,0,0,0,0,'pl',0),(6,6,11,0,0,0,0,0,0,0,0,0,0,0,'pl',0),(7,6,11,0,0,0,0,0,0,0,0,0,0,0,'en',0),(8,6,11,0,0,0,0,0,0,0,0,0,0,0,'en',0),(9,6,11,0,0,0,0,0,0,0,0,0,0,0,'en',0),(10,6,11,0,0,0,0,0,0,0,0,0,0,0,'en',0),(11,6,11,0,0,0,0,0,0,0,0,0,0,0,'en',0),(12,6,11,0,0,0,0,0,0,0,0,0,0,0,'en',0),(13,6,11,1,0,0,0,0,0,0,0,0,0,0,'en',0),(14,6,11,0,0,0,0,0,0,0,0,0,0,0,'en',0);
 /*!40000 ALTER TABLE `ps_guest` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3902,7 +3904,7 @@ CREATE TABLE `ps_mail` (
   `date_add` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_mail`),
   KEY `recipient` (`recipient`(10))
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3911,6 +3913,7 @@ CREATE TABLE `ps_mail` (
 
 LOCK TABLES `ps_mail` WRITE;
 /*!40000 ALTER TABLE `ps_mail` DISABLE KEYS */;
+INSERT INTO `ps_mail` VALUES (1,'lukilukiluk123456@gmail.com','account','[Magia Kamieni] Witaj !',2,'2024-11-28 22:28:49');
 /*!40000 ALTER TABLE `ps_mail` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6147,7 +6150,7 @@ CREATE TABLE `ps_psgdpr_log` (
   PRIMARY KEY (`id_gdpr_log`),
   KEY `id_customer` (`id_customer`),
   KEY `idx_id_customer` (`id_customer`,`id_guest`,`client_name`,`id_module`,`date_add`,`date_upd`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6156,7 +6159,7 @@ CREATE TABLE `ps_psgdpr_log` (
 
 LOCK TABLES `ps_psgdpr_log` WRITE;
 /*!40000 ALTER TABLE `ps_psgdpr_log` DISABLE KEYS */;
-INSERT INTO `ps_psgdpr_log` VALUES (1,3,0,'fsd sdfs',0,1,'2024-11-17 23:02:53','2024-11-17 23:02:53'),(2,4,0,'sdfs sdfsdf',0,1,'2024-11-19 19:13:49','2024-11-19 19:13:49');
+INSERT INTO `ps_psgdpr_log` VALUES (1,3,0,'fsd sdfs',0,1,'2024-11-17 23:02:53','2024-11-17 23:02:53'),(2,4,0,'sdfs sdfsdf',0,1,'2024-11-19 19:13:49','2024-11-19 19:13:49'),(3,1,0,'Łukasz Walczak',0,1,'2024-11-28 22:28:49','2024-11-28 22:28:49');
 /*!40000 ALTER TABLE `ps_psgdpr_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6966,7 +6969,7 @@ CREATE TABLE `ps_statssearch` (
   `results` int(6) NOT NULL DEFAULT '0',
   `date_add` datetime NOT NULL,
   PRIMARY KEY (`id_statssearch`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -6975,7 +6978,7 @@ CREATE TABLE `ps_statssearch` (
 
 LOCK TABLES `ps_statssearch` WRITE;
 /*!40000 ALTER TABLE `ps_statssearch` DISABLE KEYS */;
-INSERT INTO `ps_statssearch` VALUES (1,1,1,'ads',0,'2024-11-28 20:54:05'),(2,1,1,'Humm',0,'2024-11-28 21:07:59'),(3,1,1,'Hummingbird',0,'2024-11-28 21:08:12'),(4,1,1,'Hummingbird',0,'2024-11-28 21:08:48'),(5,1,1,'asd',0,'2024-11-28 21:09:26'),(6,1,1,'hum',0,'2024-11-28 21:09:27'),(7,1,1,'hum',0,'2024-11-28 21:09:27'),(8,1,1,'Hummingbird printed sweater',0,'2024-11-28 21:09:57'),(9,1,1,'Hummingbird printed sweater',0,'2024-11-28 21:09:57'),(10,1,1,'Hummingbird printed sweater',0,'2024-11-28 21:11:10'),(11,1,1,'hum',0,'2024-11-28 21:11:12'),(12,1,1,'hum',0,'2024-11-28 21:11:12'),(13,1,1,'hum',0,'2024-11-28 21:11:24'),(14,1,1,'hum',5,'2024-11-28 21:11:35'),(15,1,1,'hum',5,'2024-11-28 21:11:44'),(16,1,1,'hum',5,'2024-11-28 21:11:45'),(17,1,1,'hum',5,'2024-11-28 21:11:48');
+INSERT INTO `ps_statssearch` VALUES (1,1,1,'ads',0,'2024-11-28 20:54:05'),(2,1,1,'Humm',0,'2024-11-28 21:07:59'),(3,1,1,'Hummingbird',0,'2024-11-28 21:08:12'),(4,1,1,'Hummingbird',0,'2024-11-28 21:08:48'),(5,1,1,'asd',0,'2024-11-28 21:09:26'),(6,1,1,'hum',0,'2024-11-28 21:09:27'),(7,1,1,'hum',0,'2024-11-28 21:09:27'),(8,1,1,'Hummingbird printed sweater',0,'2024-11-28 21:09:57'),(9,1,1,'Hummingbird printed sweater',0,'2024-11-28 21:09:57'),(10,1,1,'Hummingbird printed sweater',0,'2024-11-28 21:11:10'),(11,1,1,'hum',0,'2024-11-28 21:11:12'),(12,1,1,'hum',0,'2024-11-28 21:11:12'),(13,1,1,'hum',0,'2024-11-28 21:11:24'),(14,1,1,'hum',5,'2024-11-28 21:11:35'),(15,1,1,'hum',5,'2024-11-28 21:11:44'),(16,1,1,'hum',5,'2024-11-28 21:11:45'),(17,1,1,'hum',5,'2024-11-28 21:11:48'),(18,1,1,'hum',5,'2024-11-28 21:33:17'),(19,1,1,'Humming',5,'2024-11-28 21:33:25');
 /*!40000 ALTER TABLE `ps_statssearch` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8082,7 +8085,7 @@ CREATE TABLE `ps_wishlist` (
   `date_upd` datetime NOT NULL,
   `default` int(10) unsigned DEFAULT '0',
   PRIMARY KEY (`id_wishlist`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -8091,6 +8094,7 @@ CREATE TABLE `ps_wishlist` (
 
 LOCK TABLES `ps_wishlist` WRITE;
 /*!40000 ALTER TABLE `ps_wishlist` DISABLE KEYS */;
+INSERT INTO `ps_wishlist` VALUES (1,1,1,1,'B553B157B821718B','My wishlist',NULL,'2024-11-28 22:29:31','2024-11-28 22:29:31',1);
 /*!40000 ALTER TABLE `ps_wishlist` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8204,4 +8208,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-28 21:25:58
+-- Dump completed on 2024-11-28 21:33:53
