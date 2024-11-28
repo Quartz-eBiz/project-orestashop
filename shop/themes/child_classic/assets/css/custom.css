@@ -22482,10 +22482,6 @@ h1{
     text-align: center!important;
 }
 
-.input-group{
-    display: block!important;
-}
-
 .btn{
     min-height: 1.5rem!important;
 }
@@ -22528,4 +22524,17 @@ h1{
 }
 :root{
     font-family: Gilda Display,sans-serif!important;   
+}
+.form-control{
+    height: 100%!important;
+}
+.input-group.bootstrap-touchspin{
+    border: none;
+}
+.input-group-btn-vertical{
+    border: 1px solid rgba(0,0,0,0.25);
+    margin-right: 1px;
+}
+#field-email,#field-password{
+    height: 3.5rem!important;
 }
