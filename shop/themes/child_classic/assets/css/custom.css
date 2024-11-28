@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap');
+
+.gilda-display-regular {
+    font-family: "Gilda Display", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
 .modal-open {
     overflow: hidden
 }
@@ -22480,4 +22488,44 @@ h1{
 
 .btn{
     min-height: 1.5rem!important;
+}
+
+.product-flag.new {
+    background-color: #FFFFFF!important;
+    color: #926727!important;
+    border: #926727 1px solid;
+    font-size: 1rem!important;
+    font-weight: 400!important;
+    line-height: 1.5!important;
+    letter-spacing: -.28px!important;
+}
+
+.product-flag.discount{
+    background-color: #FFFFFF!important;
+    color: #B23A2A!important;
+    border: #B23A2A 1px solid;
+    font-size: 1rem!important;
+    font-weight: 400!important;
+    line-height: 1.5!important;
+    letter-spacing: -.28px!important;
+}
+.dislpay, .h1, .h2, .h4, h1, h2, h4 {
+    font-family: Gilda Display,sans-serif!important;
+}
+.h1, .h2, h1, h2{
+    font-weight: 400!important;
+    line-height: 110%!important;
+}
+
+.product-miniature .product-title a{
+    font-size: 1rem;
+}
+.quick-view.js-quick-view{
+    font-family: Gilda Display,sans-serif!important;   
+}
+.dropdown-item{
+    font-family: Gilda Display,sans-serif!important;   
+}
+:root{
+    font-family: Gilda Display,sans-serif!important;   
 }
