@@ -3513,9 +3513,6 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
         transition: none
     }
 }
-.collapse:not(.show) {
-    display: none
-}
 
 .collapsing {
     height: 0;
