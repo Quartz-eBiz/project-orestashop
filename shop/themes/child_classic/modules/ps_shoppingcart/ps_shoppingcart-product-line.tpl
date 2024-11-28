@@ -1,7 +1,7 @@
 <div class="cart-products__thumb">
     <picture>
-      <source srcset="{$product.cover.small.url}" type="image/webp">
-      <img class="img-fluid" src="{$product.cover.url}" alt="{$product.name}" loading="lazy">
+      <source srcset="" type="image/webp">
+      <img class="img-fluid" src="{$product.cover.bySize.home_default.url}" alt="{$product.name}" loading="lazy">
     </picture>
   </div>
   <div class="cart-products__desc">

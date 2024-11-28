@@ -31,9 +31,10 @@
         {else}
         <div class="cart-dropdown__products pt-3 mb-3 custom-scrollbar">
           {foreach from=$cart.products item=product}
+          <!-- {var_dump($product)} -->
           <div class="cart-products">
             <div class="cart-products__thumb">
-              <img class="img-fluid" src="{$product.image.url}" alt="{$product.name}" loading="lazy">
+              <img class="img-fluid" src="{$product.cover.bySize.home_default.url}" alt="{$product.name}" loading="lazy">
             </div>
             <div class="cart-products__desc">
               <p>{$product.name}</p>

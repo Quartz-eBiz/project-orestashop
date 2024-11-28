@@ -6,10 +6,8 @@
       <div class="thumbnail-top">
         {block name='product_thumbnail'}
         {if $product.cover}
-        <!--    src="{$product.cover.bySize.home_default.url}"
-         -->
         <a href="{$product.url}" class="thumbnail product-thumbnail">
-          <img src="https://sklep.magiakamieni.pl/114046-large_default/rubin-naturalny-krysztal-31-mm-tanzania.jpg"
+          <img src="{$product.cover.bySize.home_default.url}"
             alt="{if !empty($product.cover.legend)}{$product.cover.legend}{else}{$product.name|truncate:30:'...'}{/if}"
             loading="lazy" data-full-size-image-url="{$product.cover.large.url}"
             width="{$product.cover.bySize.home_default.width}" height="{$product.cover.bySize.home_default.height}" />
