@@ -18011,19 +18011,6 @@ i[class*=" flaticon-"]:before,i[class^=flaticon-]:before {
     justify-content: center
 }
 
-.btn.add-to-cart:before {
-    -webkit-font-smoothing: antialiased;
-    content: "";
-    font-family: flaticon!important;
-    font-size: 30px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 400!important;
-    line-height: 1;
-    padding-right: 10px;
-    text-transform: none
-}
-
 .underline:hover:after {
     opacity: 1;
     width: 100%
