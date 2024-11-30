@@ -1,6 +1,6 @@
 <div id="dyn674091052701e" class="dynhook pc_displayTop_19" data-module="19" data-hook="displayTop" data-hooktype="w" data-hookargs="">
   <div class="loadingempty"></div>
-  <div class="col flex-grow-0 header-top__block header-top__block--user">
+  <div class="row flex-grow-0 header-top__block header-top__block--user">
     {if $logged}
       <a class="header-top__link" href="{$urls.actions.logout}" rel="nofollow" title="{l s='Sign out' d='Shop.Theme.Actions'}">
         <div class="header-top__icon-container">
