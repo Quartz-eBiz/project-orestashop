@@ -5,21 +5,44 @@ import re
 import os
 import random
 from adding_api.PrestaAPI import PrestaCRUD
+from adding_api.constants import CATEGORIES_TO_ADD, MAX_PRODUCTS_IN_SUBCATEGORY, PRODUCTS_TO_PUSH
+import logging
 
+# Logger config
+logger = logging.getLogger('add_products')
+logger.setLevel(logging.DEBUG)  # Set the level of debug if needed
+ch = logging.StreamHandler()
+ch.setLevel(logging.DEBUG)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+ch.setFormatter(formatter)
+logger.addHandler(ch)
+
+# Create CRUD object for with-service operations
 p_crud = PrestaCRUD()
 
 
-def push_categories_and_products(_scraped_data: dict, _scraped_subcategories_only: list, _attributes: dict[str: set]):
+def push_categories_and_products(
+        _scraped_data: dict[str, dict],
+        _scraped_subcategories_only: list,
+        _attributes: dict[str, set]
+):
     home_category_id = '2'
     element = 'category'
     resource = 'categories'
+    products_pushed = 0
 
     for category, subcategories in _scraped_data.items():
-        print(f'Trying to push category: {category}')
+        logger.debug(f'Trying to push category: {category}')
         push_category(category, home_category_id)
         category_id = p_crud.get_id_from_service(category, resource, element)
         subcategory_id = None
-        for subcategory, products in subcategories.items():
+
+        for subcategory in CATEGORIES_TO_ADD:
+            products = subcategories.get(subcategory)
+            if not products:
+                continue
+
+            num_of_products_pushed_in_subcategory = 0
 
             category_ids = [
                 home_category_id,
@@ -27,24 +50,28 @@ def push_categories_and_products(_scraped_data: dict, _scraped_subcategories_onl
                 subcategory_id
             ]
 
-            if subcategory in _scraped_subcategories_only:
-                print(f'Trying to push category: {subcategory}')
-                push_category(subcategory, subcategory_id)
-                curr_category_id = p_crud.get_id_from_service(subcategory, resource, element)
-                category_ids.append(curr_category_id)
-            else:
-                if len(subcategory):
-                    push_category(subcategory, category_id)
-                    subcategory_id = p_crud.get_id_from_service(subcategory, resource, element)
+            logger.debug(f'Trying to push subcategory: {subcategory}')
+            push_category(subcategory, category_id)
+            curr_category_id = p_crud.get_id_from_service(subcategory, resource, element)
+            category_ids.append(curr_category_id)
 
             for product_name, product_attributes in products.items():
-                push_product_package_to_service(
-                    _name=product_name,
-                    _attr=product_attributes,
-                    _category_ids=category_ids,
-                    _possible_attributes=_attributes,
-                    _category_name=subcategory
-                )
+                if push_product_package_to_service(
+                        _name_id=products_pushed,
+                        _name=product_name,
+                        _attr=product_attributes,
+                        _category_ids=category_ids,
+                        _possible_attributes=_attributes,
+                        _category_name=subcategory
+                ):
+                    num_of_products_pushed_in_subcategory += 1
+                    products_pushed += 1
+
+                if products_pushed == PRODUCTS_TO_PUSH + 1:
+                    return
+
+                if num_of_products_pushed_in_subcategory == MAX_PRODUCTS_IN_SUBCATEGORY:
+                    break
 
 
 def get_attr_value_id(_value: str, _attribute: str, _attr_id: str, _possible_attributes: dict):
@@ -64,16 +91,22 @@ def get_attr_value_id(_value: str, _attribute: str, _attr_id: str, _possible_att
         else:
             return None
     else:
-        print(f'Error: {response.status_code=}\n{response.text=}')
+        logger.error(f'Error: {response.status_code=}\n{response.text=}')
 
 
 def push_product_to_service(
+        _name_id: int,
         _name: str,
         _attr: dict,
         _category_ids: list[str],
         _possible_attributes: dict,
         _category_name: str
-):
+) -> bool:
+    
+    for link in _attr['images']:
+        if not os.path.exists(link):
+            return False
+
     element = 'product'
     resource = 'products'
 
@@ -137,12 +170,12 @@ def push_product_to_service(
 
     # Product tax rules
     product_tax_rules = ET.SubElement(product, 'id_tax_rules_group')
-    product_tax_rules.text = '1'  # True
+    product_tax_rules.text = '4' 
 
     # Easy to read link to the product
     product_link_rewrite = ET.SubElement(product, 'link_rewrite')
     product_link_rewrite_lang = ET.SubElement(product_link_rewrite, 'language', attrib={'id': '2'})
-    product_link_rewrite_lang.text = generate_link_rewrite(_name)
+    product_link_rewrite_lang.text = generate_link_rewrite(_name+str(_name_id))
 
     product_attributes = ET.SubElement(product_associations, 'product_features')
     for attribute, value in _attr['attributes'].items():
@@ -158,6 +191,8 @@ def push_product_to_service(
     product_xml = ET.tostring(root, encoding='utf-8', method='xml')
     p_crud.push_to_service(product_xml, resource)
 
+    return True
+
 
 def get_stock_id_from_service(_product_id):
     url = f'{p_crud.API_URL}/products/{_product_id}'
@@ -172,7 +207,7 @@ def get_stock_id_from_service(_product_id):
         else:
             return None
     else:
-        print(f'Error: {response.status_code=}\n{response.text=}')
+        logger.error(f'Error: {response.status_code=}\n{response.text=}')
 
 
 def push_stock_package_info_to_service(_product_id: str, _stock_id: str):
@@ -215,16 +250,16 @@ def push_stock_info_to_service(_xml_data, _stock_id):
     )
 
     if response.ok:
-        print(f"Stock został wysłany pomyślnie.")
+        logger.info(f"Stock send correctly")
     else:
-        print(f"Error while sending the stock:\n{response.status_code=}\n{response.text=}")
+        logger.error(f"Error while sending the stock:\n{response.status_code=}\n{response.text=}")
 
 
 def push_product_image_to_service(_src: str, _product_id: str):
     url = f"{p_crud.API_URL}/images/products/{_product_id}"
 
     if not os.path.isfile(_src):
-        print(f"Plik {_src} nie istnieje.")
+        logger.debug(f"Plik {_src} nie istnieje.")
         return
 
     with open(_src, 'rb') as img:
@@ -235,22 +270,24 @@ def push_product_image_to_service(_src: str, _product_id: str):
         response = requests.post(url, auth=(p_crud.API_KEY, ''), files=file, verify=False)
 
         if response.ok:
-            print(f"Photo {_src} sent correctly.")
+            logger.info(f"Photo {_src} sent correctly.")
         else:
-            print(f"Error:\n{response.status_code=}\n{response.text=}")
+            logger.error(f"Error:\n{response.status_code=}\n{response.text=}")
 
 
 def push_product_package_to_service(
+        _name_id: int,
         _name: str,
         _attr: dict,
         _category_ids: list[str],
         _possible_attributes: dict,
         _category_name: str
-):
+) -> bool:
     element = 'product'
     resource = 'products'
 
-    push_product_to_service(
+    product_has_photos = push_product_to_service(
+        _name_id,
         _name,
         _attr,
         _category_ids,
@@ -258,12 +295,18 @@ def push_product_package_to_service(
         _category_name
     )
 
-    product_id = p_crud.get_id_from_service(_name, resource, element)
+    if not product_has_photos:
+        logger.debug("No photos of product found. Product not sent.")
+        return False
+
+    product_id = p_crud.get_id_from_service(generate_link_rewrite(_name+str(_name_id)), resource, element)
     stock_id = get_stock_id_from_service(product_id)
     push_stock_package_info_to_service(product_id, stock_id)
     images = _attr['images']
     for src in images:
         push_product_image_to_service(src, product_id)
+
+    return True
 
 
 def push_category(_category_name: str, _parent_id):
@@ -303,8 +346,12 @@ def generate_link_rewrite(_name: str):
 
 
 if __name__ == '__main__':
+    logger.debug("Starting the script")
+
     scraped_data: dict = p_crud.get_json_data()
     scraped_subcategories_only: list = p_crud.get_txt_data()
 
     attributes: dict = get_attributes(scraped_data)
     push_categories_and_products(scraped_data, scraped_subcategories_only, attributes)
+
+    logger.debug("Script finished")
