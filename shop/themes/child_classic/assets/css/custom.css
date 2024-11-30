@@ -22525,3 +22525,26 @@ h1{
 #field-email,#field-password{
     height: 3.5rem!important;
 }
+#header .menu {
+    justify-content: center;
+}
+.top-menu .sub-menu.collapse{
+    margin: 0!important;
+    width: 100%!important;
+}
+.product_list.row:not(.tab-pane), .products.row:not(.tab-pane) {
+    width: 100%!important;
+}
+div#content.page-content.card.card-block{
+    width: 50%!important;
+    margin-top: 4rem!important;
+}
+button#submit-login.btn.btn-primary{
+    width: 30%!important;
+}
+.material-icons.add:before {
+    content: none;
+  }
+.material-icons:before{
+    content:none!important;
+}
