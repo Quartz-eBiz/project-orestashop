@@ -163,7 +163,15 @@ class TCPDF_IMAGES {
 		if (!@TCPDF_STATIC::file_exists($file)) {
 			return false;
 		}
-		$a = getimagesize($file);
+		
+    		$context = stream_context_create([
+        		'ssl' => [
+           	 		'verify_peer' => false,
+            			'verify_peer_name' => false,
+        		]
+		]);
+
+    		$a = @getimagesize($file, $info, $context);
 		if (empty($a)) {
 			//Missing or incorrect image file
 			return false;
