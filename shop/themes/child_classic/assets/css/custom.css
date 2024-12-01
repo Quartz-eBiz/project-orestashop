@@ -22626,3 +22626,7 @@ dl {
     color: #926727!important;
 
   }
+
+.dropdown-item:hover{
+    color:#926727!important;
+}
