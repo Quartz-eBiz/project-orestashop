@@ -24548,7 +24548,7 @@ h1 {
     letter-spacing: -.28px !important;
 }
 
-.product-flag.discount {
+.product-flag.discount, .out_of_stock {
     background-color: #FFFFFF !important;
     color: #B23A2A !important;
     border: #B23A2A 1px solid;
@@ -24734,12 +24734,12 @@ dd {
     padding: 8px !important;
 }
 
-.tabs .nav-tabs .nav-link.active {
+.tabs .nav-tabs .nav-link.active , a.disabled.js-search-link{
     color: #926727 !important;
 
 }
 
-.dropdown-item:hover {
+.dropdown-item:hover, .subcategory-name:hover {
     color: #926727 !important;
 }
 
@@ -24753,4 +24753,11 @@ dd {
     position: absolute;
     inset: 0;
     background-color: #FFF;
+}
+#header a:hover, .btn-primary.disabled:hover, .btn-primary:disabled:hover{
+    color: #926727!important;
+}
+.btn-primary.disabled:hover, .btn-primary:disabled:hover{
+    color: #926727!important;
+
 }
