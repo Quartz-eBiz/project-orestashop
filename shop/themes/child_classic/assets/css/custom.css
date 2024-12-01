@@ -22548,3 +22548,8 @@ button#submit-login.btn.btn-primary{
 .material-icons:before{
     content:none!important;
 }
+.top-menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
