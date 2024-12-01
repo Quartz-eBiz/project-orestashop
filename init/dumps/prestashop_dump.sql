@@ -3488,7 +3488,7 @@ CREATE TABLE `ps_layered_filter_block` (
 
 LOCK TABLES `ps_layered_filter_block` WRITE;
 /*!40000 ALTER TABLE `ps_layered_filter_block` DISABLE KEYS */;
-INSERT INTO `ps_layered_filter_block` VALUES ('3a048c3498871be1180e2d0f2efdfd5e','a:1:{s:7:\"filters\";a:0:{}}'),('53786a39138c081cfe6e953b508bed73','a:1:{s:7:\"filters\";a:0:{}}'),('5cddad4ecb1cfdef8afea770197cf493','a:1:{s:7:\"filters\";a:0:{}}'),('7c865b7d91f41087535b68a3678d33f3','a:1:{s:7:\"filters\";a:0:{}}'),('a785f3bbe8a60579203ec1c6316f6541','a:1:{s:7:\"filters\";a:0:{}}'),('d3a17a521e0ce2c9fc0c94f9f1b1f1df','a:1:{s:7:\"filters\";a:0:{}}'),('ef11b6edf3a8eaca045aadd5f3a3cb92','a:1:{s:7:\"filters\";a:0:{}}');
+INSERT INTO `ps_layered_filter_block` VALUES ('3a048c3498871be1180e2d0f2efdfd5e','a:1:{s:7:\"filters\";a:0:{}}'),('4d0e22e746f2173221296c462bbcf8d7','a:1:{s:7:\"filters\";a:0:{}}'),('53786a39138c081cfe6e953b508bed73','a:1:{s:7:\"filters\";a:0:{}}'),('5cddad4ecb1cfdef8afea770197cf493','a:1:{s:7:\"filters\";a:0:{}}'),('7c865b7d91f41087535b68a3678d33f3','a:1:{s:7:\"filters\";a:0:{}}'),('a785f3bbe8a60579203ec1c6316f6541','a:1:{s:7:\"filters\";a:0:{}}'),('d3a17a521e0ce2c9fc0c94f9f1b1f1df','a:1:{s:7:\"filters\";a:0:{}}'),('d58f9b74a4ce474e1ab5f46d24440d1f','a:1:{s:7:\"filters\";a:0:{}}'),('ef11b6edf3a8eaca045aadd5f3a3cb92','a:1:{s:7:\"filters\";a:0:{}}');
 /*!40000 ALTER TABLE `ps_layered_filter_block` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8210,4 +8210,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-12-01 20:25:37
+-- Dump completed on 2024-12-01 21:00:07
