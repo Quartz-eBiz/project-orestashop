@@ -22228,11 +22228,12 @@ div.x13pricehistory {
 }
 
 .hide-show-text a[data-toggle=collapse].collapsed:after {
-    content: "Czytaj więcej"
+    content: "Czytaj więcej";
 }
 
 .hide-show-text a[data-toggle=collapse]:not(.collapsed):after {
-    content: "Zwiń"
+    content: "Zwiń";
+    
 }
 
 @media(min-width: 768px) {
@@ -22503,7 +22504,7 @@ h1{
 .product-miniature .product-title a{
     font-size: 1rem;
 }
-.quick-view.js-quick-view{
+.quick-view.js-quick-view, .block-newsletter-label{
     font-family: Gilda Display,sans-serif!important;   
 }
 .dropdown-item{
@@ -22629,4 +22630,8 @@ dl {
 
 .dropdown-item:hover{
     color:#926727!important;
+}
+.gdpr_consent.gdpr_module_22 span{
+    color: #000;
+    font-size: 1rem;
 }
