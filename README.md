@@ -1,3 +1,4 @@
+
 # Quartz-eBiz
 
 Quartz-eBiz is an academic project aimed at cloning the functionality and design of [Magia Kamieni](https://sklep.magiakamieni.pl/). This project leverages the power of **PrestaShop** for its e-commerce backend, deployed using **Docker**, and a custom **web scraper** written in Python to handle data extraction.
@@ -13,6 +14,7 @@ Quartz-eBiz is an academic project aimed at cloning the functionality and design
   - [Initialization](#initialization)
 - [Project Structure](#project-structure)
 - [License](#license)
+- [Contributors](#contributors)
 
 ---
 
@@ -22,6 +24,7 @@ Quartz-eBiz is an academic project aimed at cloning the functionality and design
 - E-commerce backend powered by **PrestaShop**.
 - Data scrapper implemented in Python to fetch and populate website data.
 - Modular deployment using **Docker** for quick setup and scalability.
+- Automated tests of the shop functionalities
 
 ---
 
@@ -52,22 +55,45 @@ To set up the project locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-       git clone https://github.com/yourusername/quartz-ebiz.git
+       git clone https://github.com/yourusername/quartz-ebiz.git project-prestashop
        cd project-prestashop
    ```
 
-2. Install Python Dependencies:
+2. Set Up the Shop Environment:
    ```bash
-   pip install -r scraper\requirements.txt
+   cd init
+   docker-compose up -d --build
    ```
-3. Run the Scraper:
-   ```bash
-   python scraper\scrap.py
-   ```
-4. Set Up the Shop Environment:
-   ```bash
-   cd shop
-   docker-compose up -d
-   ```
+3. Update database dump:
+	```bash
+	cd dumps/scripts
+	sudo ./restore.sh
+	```
+
+## Project structure
+
+```
+project-prestashop/
+├── init/
+|	├── Dockerfile
+|	├── api/
+|	├── docker-compose.yml
+|	├── dumps/
+|	└── ssl/
+├── scrap_results/
+|	└── scrapper_results.json
+├── scraper/
+├── shop/
+├── tests/
+└── README.md 
+```
 
 ## License
+This project is provided **free of charge** for personal and commercial use. You are welcome to use, modify, and distribute it as you see fit, as long as you retain the original copyright notice and credit the authors.
+
+## Contributors
+
+ - Dawid Glazik
+ - Michał Tarnowski
+ - Łukasz Walczak
+ - Stefan Furmański
