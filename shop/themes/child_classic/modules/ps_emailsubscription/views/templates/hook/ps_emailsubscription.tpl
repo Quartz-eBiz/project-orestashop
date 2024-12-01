@@ -22,16 +22,16 @@
         wody bogatej w minerały, np. w podziemnych jaskiniach.</p>
       <p><strong>Zapewniamy duży wybór fascynujących okazów minerałów w różnych kolorach, rozmiarach i przedziałach
           cenowych</strong>. W naszym sklepie dla pasjonatów kamieni naturalnych, każdy znajdzie okaz dla siebie,
-        niezależnie od tego, czy szuka rzadkiego <a href="/813-mineraly-kolekcjonerskie"><u>minerału
+        niezależnie od tego, czy szuka rzadkiego <a href=""><u>minerału
             kolekcjonerskiego</u></a>, czy po prostu chce dodać nowy okaz do swojego zbioru. Oferujemy kamienie z całego
-        świata, takie jak: <a href="/338-malachit"><u>malachit</u></a>, <a href="/122-agat"><u>agat</u></a>, <a
-          href="/673-chryzokola"><u>chryzokola</u></a>, <a href="/406-piryt"><u>piryt</u></a>, <a
-          href="/164-kalcyt"><u>kalcyt</u></a>, <a href="/115-labradoryt"><u>labradoryt</u></a>, <a
-          href="/118-kwarc-rozowy"><u>kwarc różowy</u></a>, <a href="/103-krysztal-gorski"><u>kryształ górski</u></a>,
-        <a href="/298-turmalin"><u>turmalin</u></a> czy <a href="/140-ametyst"><u>ametyst</u></a>. Zapoznaj się z naszą
-        kolekcją minerałów w formie dużych <a href="/905-mineraly-geody"><u>geod</u></a>, <a
-          href="/17-mineraly-plastry"><u>plastrów</u></a> czy <a href="/16-mineraly-brylki"><u>bryłek</u></a>, <a
-          href="/14-mineraly-otoczaki"><u>otoczaków</u></a> i <a href="/84-mineraly-zglady"><u>zgładów</u></a>.
+        świata, takie jak: <a href=""><u>malachit</u></a>, <a href=""><u>agat</u></a>, <a
+          href=""><u>chryzokola</u></a>, <a href=""><u>piryt</u></a>, <a
+          href=""><u>kalcyt</u></a>, <a href=""><u>labradoryt</u></a>, <a
+          href=""><u>kwarc różowy</u></a>, <a href=""><u>kryształ górski</u></a>,
+        <a href=""><u>turmalin</u></a> czy <a href=""><u>ametyst</u></a>. Zapoznaj się z naszą
+        kolekcją minerałów w formie dużych <a href=""><u>geod</u></a>, <a
+          href=""><u>plastrów</u></a> czy <a href=""><u>bryłek</u></a>, <a
+          href=""><u>otoczaków</u></a> i <a href=""><u>zgładów</u></a>.
       </p>
       <h2>Skamieliny, skamieniałości</h2>
       <p>Skamieniałości to pozostałości lub ślady dawnego życia roślin i zwierząt, które zostały zachowane w wyniku
@@ -42,11 +42,11 @@
         błotnej, erupcji wulkanu lub sok z drzewa. Większość znalezionych śladów pochodzi od zwierząt morskich, takich
         jak skorupiaki i rekiny.</p>
       <p>W naszym sklepie znajdziesz szeroki wybór prawdziwych skamieniałości z całego świata. Świetną propozycją dla
-        kolekcjonerów są unikalne <a href="/92-amonity"><u>amonity</u></a>, <a href="/975-plaszczki"><u>zęby
-            płaszczki</u></a>, <a href="/574-jezowce"><u>skamieniałe jeżowce</u></a>, <a
-          href="/688-koralowce"><u>koralowce</u></a>, <a href="/976-krewetki"><u>krewetki</u></a>, <a
-          href="/955-mozazaury"><u>zęby mozazaura</u></a>, <a href="/894-ryby"><u>skamieniałe ryby</u></a> czy <a
-          href="/95-skamieniale-drewno"><u>skamieniałe drewno</u></a>. Kupowanie skamielin w naszym sklepie jest łatwe i
+        kolekcjonerów są unikalne <a href=""><u>amonity</u></a>, <a href=""><u>zęby
+            płaszczki</u></a>, <a href=""><u>skamieniałe jeżowce</u></a>, <a
+          href=""><u>koralowce</u></a>, <a href=""><u>krewetki</u></a>, <a
+          href=""><u>zęby mozazaura</u></a>, <a href=""><u>skamieniałe ryby</u></a> czy <a
+          href=""><u>skamieniałe drewno</u></a>. Kupowanie skamielin w naszym sklepie jest łatwe i
         bezpieczne. <strong>Oferujemy wysokiej jakości, dokładnie opisane, prawdziwe skamieniałości i gwarantujemy
           autentyczność wszystkiego, co sprzedajemy.</strong> Wysoką jakość naszych produktów poświadczamy dożywotnią
         gwarancją autentyczności.</p>
@@ -59,44 +59,44 @@
       <h2>Minerały w formie otoczaków</h2>
       <p>Kamienie naturalne towarzyszą nam od początków historii ludzkości. Przez tysiąclecia nauczyliśmy się doceniać
         właściwości minerałów i wykorzystywać je do swoich celów. W sklepie internetowym Magia Kamieni dostępne są
-        oryginalne <a href="/13-mineraly-krysztaly"><u>kryształy</u></a> i kamienie naturalne w różnej formie, w tym
+        oryginalne <a href=""><u>kryształy</u></a> i kamienie naturalne w różnej formie, w tym
         kolorowych otoczaków. Sprowadzamy je dla Was z najodleglejszych miejsc naszego globu. W naszej ofercie Klienci
-        znajdą zarówno klasyczną bębnówkę, jak również ręcznie polerowane <a href="/14-mineraly-otoczaki"><u>otoczaki z
+        znajdą zarówno klasyczną bębnówkę, jak również ręcznie polerowane <a href=""><u>otoczaki z
             minerałów</u></a>. <strong>Będą stanowić zarówno wspaniałe uzupełnienie kolekcji, jak też znakomicie
           sprawdzą się do wyrobu biżuterii</strong>. Zapraszamy w podróż po cudownym świecie minerałów i kamieni
         naturalnych.</p>
       <h2>Biżuteria z minerałami i kamieniami naturalnymi</h2>
       <p>Kamienie naturalne od pokoleń urzekają swoim niezrównanym blaskiem i niepowtarzalnym urokiem. Od czasów
         starożytnych ludzie marzyli o posiadaniu ozdób z tych wyjątkowych minerałów, ale pozwolić na nie mogli sobie
-        wyłącznie nieliczni. <a href="/33-bizuteria"><u>Biżuteria z kamieni </u></a>szlachetnych i półszlachetnych
+        wyłącznie nieliczni. <a href=""><u>Biżuteria z kamieni </u></a>szlachetnych i półszlachetnych
         zachwyca wyjątkowością, pięknem natury i pobudza wyobraźnię.</p>
-      <p>Gustowne <a href="/35-bransoletki"><u>bransoletki</u></a> z małymi minerałami w najpiękniejszych kolorach, <a
-          href="/46-wisiorki-i-zawieszki"><u>wisiorki i zawieszki z kamieni</u></a>, <a
-          href="/36-naszyjniki"><u>naszyjnik z kamieni</u></a> czy subtelne <a href="/86-kolczyki"><u>kolczyki z kamieni
+      <p>Gustowne <a href=""><u>bransoletki</u></a> z małymi minerałami w najpiękniejszych kolorach, <a
+          href=""><u>wisiorki i zawieszki z kamieni</u></a>, <a
+          href=""><u>naszyjnik z kamieni</u></a> czy subtelne <a href=""><u>kolczyki z kamieni
             naturalnych</u></a> zjawiskowo odbijają światło dzienne i przyciągają wzrok. <strong>Różnorodność minerałów
           w szerokiej gamie kolorystycznej, od naturalnych, pastelowych i ziemistych odcieni, po głębokie i wyraziste
           barwy, pozwala dopasować biżuterię artystyczną z kamieni do własnych upodobań i różnych stylizacji</strong>.
         Może być zarówno efektowna i elegancka, jak i bardziej subtelna. Kamienie nie tylko pięknie prezentują się na
         ręce lub szyi, wykazują także unikalne właściwości, pozytywnie wpływające na różne aspekty naszego życia. Daj
         się zachwycić ich magicznej mocy i wybierz biżuterię z kryształu górskiego, <a
-          href="/150-ametyst-bizuteria"><u>biżuterię z ametystu</u></a>, <a href="/151-awenturyn-bizuteria"><u>biżuterię
-            z awenturynu</u></a>, <a href="/154-jaspis-bizuteria"><u>biżuterię z jaspisu</u></a> czy mieniącą się
-        różnymi barwami <a href="/347-labradoryt-bizuteria"><u>biżuterię z labradorytu</u></a>.</p>
+          href=""><u>biżuterię z ametystu</u></a>, <a href=""><u>biżuterię
+            z awenturynu</u></a>, <a href=""><u>biżuterię z jaspisu</u></a> czy mieniącą się
+        różnymi barwami <a href=""><u>biżuterię z labradorytu</u></a>.</p>
       <h2>Wyroby z naturalnych kamieni szlachetnych, półszlachetnych</h2>
       <p>Wyroby z naturalnych kamieni stanowią nietuzinkowy pomysł na ozdoby do mieszkania czy pomieszczeń w biurze.
-        Minerały, takie jak <a href="/133-selenit-kamien-ksiezycowy"><u>selenit</u></a>, <a
-          href="/142-sodalit"><u>sodalit</u></a>, <a href="/216-obsydian"><u>obsydian</u></a>, <a
-          href="/111-karneol"><u>karneol</u></a>, <a href="/109-opal"><u>opal</u></a> i wiele innych, doskonale nadaje
+        Minerały, takie jak <a href=""><u>selenit</u></a>, <a
+          href=""><u>sodalit</u></a>, <a href=""><u>obsydian</u></a>, <a
+          href=""><u>karneol</u></a>, <a href=""><u>opal</u></a> i wiele innych, doskonale nadaje
         się do poddania obróbce. Wykonania z nich ozdoby, niedużym kosztem pozwolą odmienić wygląd sypialni, salonu czy
         gabinetu. <strong>W naszej ofercie dostępne są wyroby z naturalnych kamieni w postaci przedmiotów użytkowych,
-          jak i dekoracyjnych dodatków w różnych kolorach</strong>. <a href="/57-figurki-zwierzat"><u>Figurki zwierząt
+          jak i dekoracyjnych dodatków w różnych kolorach</strong>. <a href=""><u>Figurki zwierząt
           </u></a>oraz geody stanowią doskonałe dopełnienie aranżacji w każdym stylu wnętrzarskim. Wytwory natury,
-        którym przez szlifowanie i rzeźbienie nadano kształt <a href="/61-jajka-z-kamieni"><u>jajka</u></a>, <a
-          href="/60-kule-z-kamieni"><u>kuli</u></a>, <a href="/69-serca"><u>serca</u></a>, sprawdzą się jako elementy
+        którym przez szlifowanie i rzeźbienie nadano kształt <a href=""><u>jajka</u></a>, <a
+          href=""><u>kuli</u></a>, <a href=""><u>serca</u></a>, sprawdzą się jako elementy
         ozdobne czy organizery, przyciągające pozytywną energię.</p>
       <h2>Obeliski i wieże z kamieni naturalnych</h2>
       <p>Wybierając wyjątkowe wyroby z kamieni naturalnych, czy to w postaci wazonów, obelisków, <a
-          href="/864-piramidy"><u>piramid z minerałów</u></a> czy <a href="/89-swieczniki"><u>świeczników</u></a>
+          href=""><u>piramid z minerałów</u></a> czy <a href=""><u>świeczników</u></a>
         stawianych na komodzie lub stoliku kawowym, możemy mieć pewność, że mieszkanie zyska na niepowtarzalności.
         <strong>Każdy minerał jest wyjątkowy, dzięki czemu nikt nie będzie miał dekoracji wyglądającej dokładnie tak
           samo.</strong> Obeliski i wieże z naturalnych kamieni to wyjątkowe i bardzo dekoracyjne produkty. Wykonywane
@@ -107,13 +107,15 @@
       <p>W astrologii kamienie odgrywają bardzo ważną rolę. Według wierzeń konkretne minerały powiązane są z
         poszczególnymi znakami Zodiaku. Mają one pozytywny wpływ na swojego właściciela i bywają pomocne w wielu
         aspektach jego życia. <strong>Dlatego też w naszym sklepie internetowym stworzyliśmy specjalną wyszukiwarkę, aby
-          ułatwić znalezienie właściwych </strong><a href="/19-kamienie-dla-znakow-zodiaku"><u><strong>kamieni
+          ułatwić znalezienie właściwych </strong><a href=""><u><strong>kamieni
               przypisanych do danego znaku Zodiaku</strong></u></a>. Kliknięcie na odpowiednią grafikę wyświetla
         wszystkie kamienie przypisane do danego znaku, zarówno w postaci surowych brył, jak i biżuterii, czy też wyrobów
         wykonanych z tych kamieni.</p>
     </div>
-    <div class="text-center"><a class="collapsed" data-toggle="collapse" href="#collapseMainText" aria-expanded="true"
-        aria-controls="collapseMainText"></a></div>
+    <div class="text-center">
+      <a class="collapsed" data-toggle="collapse" href="#collapseMainText" aria-expanded="false"
+        aria-controls="collapseMainText"></a>
+    </div>
   </div>
 
 </div>
