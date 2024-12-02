@@ -6,13 +6,13 @@ p_crud = PrestaCRUD()
 
 
 def get_attributes(_data: dict) -> dict:
-    unique_attr = defaultdict(set)
+    unique_attr = defaultdict(list)
     for _, subcategories in _data.items():
         for _, products in subcategories.items():
             for _, product_values in products.items():
                 for attr, attr_val in product_values['attributes'].items():
-                    if attr_val:
-                        unique_attr[attr].add(attr_val)
+                    if attr_val and attr_val not in unique_attr[attr]:
+                        unique_attr[attr].append(attr_val)
     return dict(unique_attr)
 
 

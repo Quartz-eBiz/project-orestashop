@@ -45,8 +45,8 @@ class ECommerceAutomation:
         self.driver.find_element(By.CLASS_NAME, "form-control-submit").click()
         print("Rejestracja zakończona sukcesem!")
 
-    def add_products_to_cart(self, category_urls=["https://localhost/index.php?id_category=61&controller=category",
-                                                  "https://localhost/index.php?id_category=10&controller=category"], num_products=5):
+    def add_products_to_cart(self, category_urls=["https://localhost/index.php?id_category=63&controller=category",
+                                                  "https://localhost/index.php?id_category=72&controller=category"], num_products=5):
         """Dodaje produkty do koszyka z podanych kategorii."""
         for category_url in category_urls:
             self.navigate_to(category_url)

@@ -7,6 +7,7 @@ import random
 from adding_api.PrestaAPI import PrestaCRUD
 from adding_api.constants import CATEGORIES_TO_ADD, MAX_PRODUCTS_IN_SUBCATEGORY, PRODUCTS_TO_PUSH
 import logging
+from decimal import Decimal, ROUND_HALF_UP
 
 # Logger config
 logger = logging.getLogger('add_products')
@@ -20,6 +21,12 @@ logger.addHandler(ch)
 # Create CRUD object for with-service operations
 p_crud = PrestaCRUD()
 
+VAT_RATE = Decimal('0.23')
+
+def calculate_net_price(target_gross_price: str) -> Decimal:
+    gross_price_decimal = Decimal(target_gross_price)
+    net_price = gross_price_decimal / (1 + VAT_RATE)
+    return net_price.quantize(Decimal('0.01'), rounding=ROUND_HALF_UP)
 
 def push_categories_and_products(
         _scraped_data: dict[str, dict],
@@ -103,6 +110,9 @@ def push_product_to_service(
         _category_name: str
 ) -> bool:
     
+    if not _attr['images']:
+        return False
+    
     for link in _attr['images']:
         if not os.path.exists(link):
             return False
@@ -118,9 +128,12 @@ def push_product_to_service(
     product_name_lang = ET.SubElement(product_name, 'language', attrib={'id': '2'})
     product_name_lang.text = _name
 
+    # Calculating net price from gross price
+    net_price = calculate_net_price(_attr['price'].split()[0].replace(',', '.'))
+
     # Product price
     product_price = ET.SubElement(product, 'price')
-    product_price.text = ''.join(_attr['price'].split()[0]).replace(',', '.')
+    product_price.text = str(net_price)
 
     # Would it be possible to see the product price
     product_price_show = ET.SubElement(product, 'show_price')
@@ -170,7 +183,7 @@ def push_product_to_service(
 
     # Product tax rules
     product_tax_rules = ET.SubElement(product, 'id_tax_rules_group')
-    product_tax_rules.text = '4' 
+    product_tax_rules.text = '1' 
 
     # Easy to read link to the product
     product_link_rewrite = ET.SubElement(product, 'link_rewrite')
