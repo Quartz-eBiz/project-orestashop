@@ -13,10 +13,10 @@ else
 fi
 
 # Ustawienia bazy danych
-DB_CONTAINER=ebiz_mysql
+DB_CONTAINER=admin-mysql_db
 DB_USER=${DB_USER}
 DB_PASSWD=${DB_PASSWD}
-DB_NAME=prestashop
+DB_NAME=BE_193069
 DUMP_FILE=../prestashop_dump.sql
 
 # Sprawdzenie, czy zmienne środowiskowe DB_USER i DB_PASSWD są ustawione
