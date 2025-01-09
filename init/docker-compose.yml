@@ -1,12 +1,4 @@
 services:
-  maildev:
-    image: maildev/maildev
-    container_name: maildev
-    ports:
-      - 1080:1080
-      - 1025:1025
-    networks:
-      - prestashop_network
   mysql:
     platform: linux/x86_64
     container_name: ebiz_mysql
@@ -26,7 +18,6 @@ services:
     restart: unless-stopped
     depends_on:
       - mysql
-      - maildev
     ports:
       - 8080:80
       - 443:443
@@ -37,13 +28,6 @@ services:
       DB_PASSWD: ${DB_PASSWD}
       PS_INSTALL_AUTO: 1
       PS_DOMAIN: localhost:8080
-      MAILDEV_SMTP_HOST: maildev
-      MAILDEV_SMTP_PORT: 1025
     networks:
       - prestashop_network
     volumes:
-      - ./../shop:/var/www/html
-networks:
-  prestashop_network:
-volumes:
-  ebiz_mysql:
