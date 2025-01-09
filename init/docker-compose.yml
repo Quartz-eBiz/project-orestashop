@@ -28,6 +28,14 @@ services:
       DB_PASSWD: ${DB_PASSWD}
       PS_INSTALL_AUTO: 1
       PS_DOMAIN: localhost:8080
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 512M
+        reservations:
+          cpus: '1.0'
+          memory: 256M
     networks:
       - prestashop_network
     volumes:
