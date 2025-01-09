@@ -31,7 +31,7 @@ class ECommerceAutomation:
 
     def register_new_account(self, email, password):
         """Rejestruje nowe konto użytkownika."""
-        self.navigate_to("https://localhost/index.php?controller=authentication&create_account=1")
+        self.navigate_to("https://localhost:19306/index.php?controller=authentication&create_account=1")
 
         self.wait.until(EC.presence_of_element_located((By.ID, "field-firstname")))
 
@@ -45,8 +45,8 @@ class ECommerceAutomation:
         self.driver.find_element(By.CLASS_NAME, "form-control-submit").click()
         print("Rejestracja zakończona sukcesem!")
 
-    def add_products_to_cart(self, category_urls=["https://localhost/index.php?id_category=63&controller=category",
-                                                  "https://localhost/index.php?id_category=72&controller=category"], num_products=5):
+    def add_products_to_cart(self, category_urls=["https://localhost:19306/index.php?id_category=63&controller=category",
+                                                  "https://localhost:19306/index.php?id_category=72&controller=category"], num_products=5):
         """Dodaje produkty do koszyka z podanych kategorii."""
         for category_url in category_urls:
             self.navigate_to(category_url)
@@ -74,7 +74,7 @@ class ECommerceAutomation:
 
     def search_and_add_product(self, search_term):
         """Wyszukuje produkt i dodaje go do koszyka."""
-        self.navigate_to("https://localhost/index.php")
+        self.navigate_to("https://localhost:19306/index.php")
         search_input = self.driver.find_element(By.CLASS_NAME, "js-search-input")
         search_input.clear()
         search_input.send_keys(search_term)
@@ -96,7 +96,7 @@ class ECommerceAutomation:
 
     def remove_from_cart(self):
         """Usuwa produkty z koszyka."""
-        self.navigate_to("https://localhost/index.php?controller=cart&action=show")
+        self.navigate_to("https://localhost:19306/index.php?controller=cart&action=show")
         print("Otwieranie koszyka.")
 
         delete_buttons = self.driver.find_elements(By.CSS_SELECTOR, "a[data-link-action='delete-from-cart']")
@@ -106,12 +106,12 @@ class ECommerceAutomation:
             button.click()
             print("Usunięto produkt z koszyka.")
 
-        self.navigate_to("https://localhost/index.php?controller=cart&action=show")
+        self.navigate_to("https://localhost:19306/index.php?controller=cart&action=show")
         print("Proces usuwania produktów zakończony.")
 
     def complete_order(self):
         """Wypełnia formularz zamówienia i finalizuje zakup."""
-        self.navigate_to("https://localhost/index.php?controller=cart&action=show")
+        self.navigate_to("https://localhost:19306/index.php?controller=cart&action=show")
         checkout_btn = self.driver.find_element(By.CLASS_NAME, "checkout")
         checkout_btn.click()
         print("Rozpoczęto proces finalizacji zamówienia.")
@@ -154,7 +154,7 @@ class ECommerceAutomation:
         print("Zamówienie zostało złożone.")
 
     def check_status_and_download_invoice(self):
-        self.navigate_to("https://localhost/admin-dev/")
+        self.navigate_to("https://localhost:19306/admin-dev/")
         email_input = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.ID, "email"))
         )
@@ -206,7 +206,7 @@ class ECommerceAutomation:
         update_button.click()
         print("Kliknięto przycisk 'Aktualizacja statusu'.")
         """Sprawdza status zamówienia i pobiera fakturę PDF."""
-        self.navigate_to("https://localhost/index.php")
+        self.navigate_to("https://localhost:19306/index.php")
         account_link = self.wait.until(
             EC.element_to_be_clickable((By.CSS_SELECTOR, "a.header-top__link[title='Wyświetl moje konto klienta']"))
         )
