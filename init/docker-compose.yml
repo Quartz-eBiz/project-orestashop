@@ -1,16 +1,16 @@
 services:
   mysql:
     platform: linux/x86_64
-    container_name: ebiz_mysql
+    container_name: admin-mysql_db
     image: mysql:5.7
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: prestashop
+      MYSQL_ROOT_PASSWORD: student
+      MYSQL_DATABASE: BE_193069
     networks:
       - prestashop_network
     volumes:
-      - ebiz_mysql:/var/lib/mysql
+      - admin-mysql_db:/var/lib/mysql
   prestashop:
     platform: linux/x86_64
     container_name: prestashop
@@ -19,15 +19,14 @@ services:
     depends_on:
       - mysql
     ports:
-      - 8080:80
-      - 443:443
+      - 19306:443
     environment:
-      DB_SERVER: ebiz_mysql
-      DB_NAME: prestashop
-      DB_USER: ${DB_USER}
-      DB_PASSWD: ${DB_PASSWD}
+      DB_SERVER: admin-mysql_db
+      DB_NAME: BE_193069
+      DB_USER: root
+      DB_PASSWD: student
       PS_INSTALL_AUTO: 1
-      PS_DOMAIN: localhost:8080
+      PS_DOMAIN: localhost:19306
     deploy:
       resources:
         limits:
@@ -39,3 +38,19 @@ services:
     networks:
       - prestashop_network
     volumes:
+      - ./../shop:/var/www/html
+  memcached:
+    image: memcached:alpine
+    container_name: memcached
+    command: memcached -m 64 -o modern -v
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
+          memory: 128M
+    networks:
+      - prestashop_network
+networks:
+  prestashop_network:
+volumes:
+  admin-mysql_db:

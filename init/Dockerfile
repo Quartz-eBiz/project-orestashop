@@ -18,5 +18,11 @@ RUN chmod 777 -R /etc/apache2/sites-available/000-default.conf
 
 RUN chmod +x /tmp/init-scripts/init_db.sh
 
+RUN apt-get update && apt-get install -y \
+    libmemcached-dev \
+    zlib1g-dev \
+    && pecl install memcached \
+    && docker-php-ext-enable memcached
+
 RUN a2enmod ssl
 RUN service apache2 restart
