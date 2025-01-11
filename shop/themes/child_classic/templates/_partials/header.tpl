@@ -11,7 +11,7 @@
 
         <div class="text-center col header-top__block header-top__block--logo">
           <div class="my-2">
-            <a href="https://sklep.magiakamieni.pl/">
+            <a href="/index.php">
               <img class="logo img-fluid" src="https://sklep.magiakamieni.pl/img/logo-1718343957.svg" height="50"
                 width="120" alt="Magia Kamieni logo" loading="lazy">
             </a>
@@ -31,7 +31,7 @@
 
         <div class="col-md-2 col header-top__block header-top__block--logo hidden-sm-down">
           <div class="mb-0 h5">
-            <a href="https://127.0.0.1">
+            <a href="/index.php">
               <img class="logo img-fluid" src="https://sklep.magiakamieni.pl/img/logo-1718343957.svg" height="50"
                 width="120" alt="Magia Kamieni logo" loading="lazy">
             </a>
