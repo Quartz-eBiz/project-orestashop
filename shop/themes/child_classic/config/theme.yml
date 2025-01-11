@@ -7,7 +7,7 @@ assets:
   js:
       all:
         - id: analytics
-          path: assets/js/ga_analitycs.js
+          path: assets/js/ga.js
           priority: 10
           position: bottom
         - id: ga-function
