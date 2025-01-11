@@ -36,5 +36,18 @@
   </div>
 </div>
 
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('slider-container').addEventListener('click', function() {
+      gtag('event', 'kliknięcie_slider_div', {
+        'event_category': 'Obszar Slidera',
+        'event_label': 'Kliknięcie na slider',
+        'value': 1
+      });
+    });
+  });
+</script>
+
 {/if}
 
