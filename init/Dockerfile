@@ -4,7 +4,9 @@ COPY init/dumps/prestashop_dump.sql /tmp/sql/prestashop_dump.sql
 RUN chmod 777 -R /tmp/sql/prestashop_dump.sql
 COPY init/init_db.sh /tmp/init-scripts/
 RUN chmod 777 -R /tmp/init-scripts/
+COPY ../shop/ /var/www/html
 RUN rm -rf /var/www/html/install
+RUN chmod 777 -R /var/www/html
 
 # Kopiowanie plików SSL i skryptu konfiguracyjnego
 COPY init/ssl/apache-selfsigned.key /etc/ssl/private/apache-selfsigned.key
