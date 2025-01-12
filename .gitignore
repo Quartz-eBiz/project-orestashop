@@ -2,7 +2,6 @@
 .idea/
 /.htaccess
 *.log
-init/ssl/apache-selfsigned.key
 init/.env
 
 # Cache
