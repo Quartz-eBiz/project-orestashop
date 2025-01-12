@@ -38,7 +38,7 @@ services:
     networks:
       - prestashop_network
     volumes:
-      - ./../shop:/var/www/html
+      - shop:/var/www/html
   memcached:
     image: memcached:alpine
     container_name: memcached

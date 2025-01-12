@@ -1,17 +1,17 @@
 FROM prestashop/prestashop:1.7.8
 
-COPY dumps/prestashop_dump.sql /tmp/sql/prestashop_dump.sql
+COPY init/dumps/prestashop_dump.sql /tmp/sql/prestashop_dump.sql
 RUN chmod 777 -R /tmp/sql/prestashop_dump.sql
-COPY init_db.sh /tmp/init-scripts/
+COPY init/init_db.sh /tmp/init-scripts/
 RUN chmod 777 -R /tmp/init-scripts/
 RUN rm -rf /var/www/html/install
 
 # Kopiowanie plików SSL i skryptu konfiguracyjnego
-COPY ssl/apache-selfsigned.key /etc/ssl/private/apache-selfsigned.key
+COPY init/ssl/apache-selfsigned.key /etc/ssl/private/apache-selfsigned.key
 RUN chmod 777 -R /etc/ssl/private/apache-selfsigned.key
-COPY ssl/apache-selfsigned.crt /etc/ssl/certs/apache-selfsigned.crt
+COPY init/ssl/apache-selfsigned.crt /etc/ssl/certs/apache-selfsigned.crt
 RUN chmod 777 -R /etc/ssl/certs/apache-selfsigned.crt
-COPY ssl/000-default.conf /etc/apache2/sites-available/000-default.conf
+COPY init/ssl/000-default.conf /etc/apache2/sites-available/000-default.conf
 RUN chmod 777 -R /etc/apache2/sites-available/000-default.conf
 
 RUN chmod +x /tmp/init-scripts/init_db.sh
