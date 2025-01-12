@@ -27,5 +27,5 @@ jobs:
       with:
         push: true
         context: .
-        file: ./init/Dockerfile
+        file: ./Dockerfile
         tags: tarnowsky/ebiz-quartz:latest
